@@ -55,6 +55,19 @@ def mysqlAcess(myhost,databases,passw,porta):
         connmysql.commit()
     connmysql.close()
 
+""" 
+MESMA CONDIÇÃO ACIMA, PORÉM COM UM show_warnings() PARA TRATAR ERROS EM BIG SCRIPTS.
+        stmts = parse_sql('query.sql')
+    with connmysql.cursor() as cursor:
+        for stmt in stmts:
+            try:
+                cursor.execute(stmt)
+            except:
+                print(connmysql.show_warnings())
+        connmysql.commit()
+    connmysql.close()
+"""
+
 # ARRAY USADO PARA FAZER AS CONEXOES
 x = [
 
